@@ -1,0 +1,27 @@
+- hosts: all
+  vars_files:
+        - vars
+  tasks:
+        - package:
+                name: docker-ce
+                state: present
+
+        - file:
+                path: /root/Desktop/ImagesD
+                state: directory
+
+        - copy:
+                dest: /root/Desktop/ImagesD
+                src: "/root/Desktop/Desktop/software/DockerImages/{{ image_name }}.tar"
+
+                
+        - docker_image:
+                name: "{{ image_name }}"
+                load_path: "/root/Desktop/ImagesD/{{ image_name }}.tar"
+                state: present
+                source: load
+
+        - service: 
+                name: docker
+                state: started
+
