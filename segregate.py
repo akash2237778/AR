@@ -27,6 +27,6 @@ for ip in listIP :
 		if not ip in content :
 			s , n = subprocess.getstatusoutput("sudo echo \""+ip+"\" | cat >> /root/Desktop/Playbook/inventory/selected")
 
-
+subprocess.getoutput("sudo /root/Desktop/Playbook/selectedFUpdate.py")
 print(ipS1)
 print(ipS2)

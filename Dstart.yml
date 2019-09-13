@@ -1,0 +1,14 @@
+- hosts: selected
+  vars_files:
+        - vars
+  tasks:
+        - docker_container:
+                name: "{{ Dname }}"
+                state: present
+                image: "{{ image_name }}"
+                command: sleep infinity
+                
+        - docker_container:
+                name: "{{ Dname }}"
+                state: started
+                image: "{{ image_name }}"

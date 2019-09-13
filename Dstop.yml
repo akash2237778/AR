@@ -1,0 +1,7 @@
+- hosts: selected
+  vars_files:
+        - vars
+  tasks:
+        - docker_container:
+                name: "{{ Dname }}"
+                state: stopped
