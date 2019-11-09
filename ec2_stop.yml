@@ -1,0 +1,11 @@
+- hosts: localhost
+  vars_files:
+        - vars/ec2_variables
+  tasks:
+          - ec2:
+                aws_access_key: AKIA3SPWFNR66HWNTB64
+                aws_secret_key: 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
+                instance_id: "i-03e417fc7f09c3798"
+                state: stopped
+                region: ap-south-1
+               
