@@ -1,4 +1,4 @@
-- hosts: selected
+- hosts: all
   vars_files:
         - vars/Dname
   tasks: 
