@@ -1,0 +1,13 @@
+- hosts: localhost
+  vars_files:
+        - vars/ec2_variables
+  tasks:
+          - ec2:
+                region: "{{ region }}"
+                instance_type: "{{ instance_type }}"
+                image: "{{ image }}"
+                aws_access_key: AKIA3SPWFNR66HWNTB64
+                aws_secret_key: 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
+                instance_tags:
+                        name: akash
+               

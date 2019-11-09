@@ -1,6 +1,6 @@
 - hosts: all
   vars_files:
-        - vars
+        - vars/imageName
   tasks:
         - package:
                 name: docker-ce
@@ -12,12 +12,12 @@
 
         - copy:
                 dest: /root/Desktop/ImagesD
-                src: "/root/Desktop/Desktop/software/DockerImages/{{ image_name }}.tar"
+                src: "/root/Desktop/Desktop/software/DockerImages/{{ Dname }}.tar"
 
                 
         - docker_image:
-                name: "{{ image_name }}"
-                load_path: "/root/Desktop/ImagesD/{{ image_name }}.tar"
+                name: "{{ Dname }}"
+                load_path: "/root/Desktop/ImagesD/{{ Dname }}.tar"
                 state: present
                 source: load
 

@@ -1,6 +1,7 @@
-- hosts: selected
+- hosts: all
   vars_files:
-        - vars
+        - vars/Dname
+        - vars/imageName
   tasks:
         - docker_container:
                 name: "{{ Dname }}"
