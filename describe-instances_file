@@ -236,10 +236,10 @@
             "Instances": [
                 {
                     "AmiLaunchIndex": 0,
-                    "ImageId": "ami-0123b531fc646552f",
-                    "InstanceId": "i-03e417fc7f09c3798",
+                    "ImageId": "ami-0a74bfeb190bd404f",
+                    "InstanceId": "i-0dad825bb5177945e",
                     "InstanceType": "t2.micro",
-                    "LaunchTime": "2019-11-09T09:37:51.000Z",
+                    "LaunchTime": "2019-11-11T13:04:03.000Z",
                     "Monitoring": {
                         "State": "disabled"
                     },
@@ -248,24 +248,78 @@
                         "GroupName": "",
                         "Tenancy": "default"
                     },
-                    "PrivateDnsName": "",
+                    "PrivateDnsName": "ip-172-31-15-73.ap-south-1.compute.internal",
+                    "PrivateIpAddress": "172.31.15.73",
                     "ProductCodes": [],
                     "PublicDnsName": "",
                     "State": {
-                        "Code": 48,
-                        "Name": "terminated"
+                        "Code": 80,
+                        "Name": "stopped"
                     },
-                    "StateTransitionReason": "User initiated (2019-11-09 09:40:39 GMT)",
+                    "StateTransitionReason": "User initiated (2019-11-11 13:34:22 GMT)",
+                    "SubnetId": "subnet-17a5245b",
+                    "VpcId": "vpc-0483a86c",
                     "Architecture": "x86_64",
-                    "BlockDeviceMappings": [],
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2019-11-11T13:04:04.000Z",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-0c4ffe624826966d5"
+                            }
+                        }
+                    ],
                     "ClientToken": "",
                     "EbsOptimized": false,
                     "EnaSupport": true,
                     "Hypervisor": "xen",
-                    "NetworkInterfaces": [],
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2019-11-11T13:04:03.000Z",
+                                "AttachmentId": "eni-attach-052fc288243115a8a",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "",
+                            "Groups": [
+                                {
+                                    "GroupName": "default",
+                                    "GroupId": "sg-cdf444a1"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "0a:4f:9d:fc:0d:30",
+                            "NetworkInterfaceId": "eni-04cbbf77dfd97cfc5",
+                            "OwnerId": "795622075517",
+                            "PrivateDnsName": "ip-172-31-15-73.ap-south-1.compute.internal",
+                            "PrivateIpAddress": "172.31.15.73",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-31-15-73.ap-south-1.compute.internal",
+                                    "PrivateIpAddress": "172.31.15.73"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-17a5245b",
+                            "VpcId": "vpc-0483a86c",
+                            "InterfaceType": "interface"
+                        }
+                    ],
                     "RootDeviceName": "/dev/sda1",
                     "RootDeviceType": "ebs",
-                    "SecurityGroups": [],
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "default",
+                            "GroupId": "sg-cdf444a1"
+                        }
+                    ],
+                    "SourceDestCheck": true,
                     "StateReason": {
                         "Code": "Client.UserInitiatedShutdown",
                         "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
@@ -273,7 +327,7 @@
                     "Tags": [
                         {
                             "Key": "name",
-                            "Value": "akash"
+                            "Value": "Akansha"
                         }
                     ],
                     "VirtualizationType": "hvm",
@@ -290,7 +344,7 @@
                 }
             ],
             "OwnerId": "795622075517",
-            "ReservationId": "r-01419d9a7d049d1fc"
+            "ReservationId": "r-018fc2b897034a28f"
         },
         {
             "Groups": [],
@@ -406,6 +460,121 @@
             ],
             "OwnerId": "795622075517",
             "ReservationId": "r-08211db7c9e49144c"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-0a74bfeb190bd404f",
+                    "InstanceId": "i-048b1a1813e6fe173",
+                    "InstanceType": "t2.micro",
+                    "LaunchTime": "2019-11-11T13:04:14.000Z",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-south-1b",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-172-31-7-19.ap-south-1.compute.internal",
+                    "PrivateIpAddress": "172.31.7.19",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2019-11-11 13:34:23 GMT)",
+                    "SubnetId": "subnet-17a5245b",
+                    "VpcId": "vpc-0483a86c",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2019-11-11T13:04:15.000Z",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-0e63376cd39172579"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2019-11-11T13:04:14.000Z",
+                                "AttachmentId": "eni-attach-05fbb6fd43cd57182",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "",
+                            "Groups": [
+                                {
+                                    "GroupName": "default",
+                                    "GroupId": "sg-cdf444a1"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "0a:36:12:08:1c:08",
+                            "NetworkInterfaceId": "eni-00424f0c27cb41119",
+                            "OwnerId": "795622075517",
+                            "PrivateDnsName": "ip-172-31-7-19.ap-south-1.compute.internal",
+                            "PrivateIpAddress": "172.31.7.19",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-31-7-19.ap-south-1.compute.internal",
+                                    "PrivateIpAddress": "172.31.7.19"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-17a5245b",
+                            "VpcId": "vpc-0483a86c",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "default",
+                            "GroupId": "sg-cdf444a1"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "name",
+                            "Value": "Akansha"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    }
+                }
+            ],
+            "OwnerId": "795622075517",
+            "ReservationId": "r-00484e0a5ab5aa6d5"
         }
     ]
 }

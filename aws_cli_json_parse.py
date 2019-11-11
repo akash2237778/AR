@@ -8,11 +8,12 @@ sb.getoutput("touch describe-instances_file")
 sb.getoutput("aws ec2 describe-instances > describe-instances_file ")
 
 
-instance_id = "akash"
+instance_id = "NullValue"
 instance_id_list = []
-instance_state = "akash"
+instance_state = "NullValue"
 instance_state_list = []
-
+instance_name = "NullValue"
+instance_name_list =[]
 
 while  not instance_id ==  "null":
 	instance_id = sb.getoutput("cat describe-instances_file | jq '.Reservations["+str(i)+"].Instances[0].InstanceId'")
@@ -20,6 +21,14 @@ while  not instance_id ==  "null":
 	if not instance_id == "null" :
 		instance_id_list.append(instance_id)
 
+
+i=0
+while  not instance_name ==  "null":
+	instance_name = sb.getoutput("cat describe-instances_file | jq '.Reservations["+str(i)+"].Instances[0].Tags[0].Value'")
+	i = i+1
+	if not instance_name == "null" :
+		instance_name_list.append(instance_name)
+		#instance_name_list[i] = instance_name
 
 i=0
 while  not instance_state ==  "null":
@@ -30,5 +39,5 @@ while  not instance_state ==  "null":
 
 i = 0
 for id_ in instance_id_list:
-	print( id_ + ":" +  instance_state_list[instance_id_list.index(id_)])
+	print( id_ + ":" +  instance_state_list[instance_id_list.index(id_)] + " : " + instance_name_list[instance_id_list.index(id_)])
 	i = i+1

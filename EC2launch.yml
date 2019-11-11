@@ -9,5 +9,5 @@
                 aws_access_key: AKIA3SPWFNR66HWNTB64
                 aws_secret_key: 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
                 instance_tags:
-                        name: akash
+                        name: "{{ name }}"
                
