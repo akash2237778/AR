@@ -37,7 +37,12 @@ while  not instance_state ==  "null":
 	if not instance_state == "null" :
 		instance_state_list.append(instance_state)
 
+sb.getoutput("rm /var/www/html/aws_info.csv")
+sb.getoutput("touch /var/www/html/aws_info.csv")
 i = 0
 for id_ in instance_id_list:
-	print( id_ + ":" +  instance_state_list[instance_id_list.index(id_)] + " : " + instance_name_list[instance_id_list.index(id_)])
+	describe=id_ + "," +  instance_state_list[instance_id_list.index(id_)] + "," + instance_name_list[instance_id_list.index(id_)] + "\n"
 	i = i+1
+	sb.getoutput("echo " + describe +  " | cat >> /var/www/html/aws_info.html")
+
+
